@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #stockDetails {
+            margin-top: 20px;
+        }
+
+        #stockTable {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #stockTable th,
+        #stockTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #stockTable th {
+            background-color: #f2f2f2;
+        }
+
+        #stockChart {
+            margin-top: 20px;
+            width: 100%;
+            height: 400px;
+        }
+        button{
+            background-color: rgb(38, 228, 38);
+            box-shadow: 0 0 10px 0 green;
+            border: none;
+            padding: 9px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input{
+            padding: 7px;
+            margin-right: 5px;
+            width: 250px;
+        }
+
+        select{
+            padding: 7px;
+            margin-right: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Stock Tracker Dashboard </h1>
+    <label for="stockDropdown">Select a stock:</label>
+    <select id="stockDropdown">
+
+    </select>
+    <button id="loadStockButton">Load Stock Data</button>
+
+    <div>
+        <input type="text" placeholder="Search for a stock(ex.AAPL)" id="inputText">
+        <button id="searchStockButton">Search</button>
+    </div>
+
+    <h1>Stock Information</h1>
+    <div id="stockDetails">
+    </div>
+    <h1>Stock Price Graph</h1>
+    <canvas id="stockChart"></canvas>
+
+
+    <h1>Compare Stocks</h1>
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Change</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
